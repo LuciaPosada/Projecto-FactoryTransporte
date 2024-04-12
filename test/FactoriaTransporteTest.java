@@ -18,4 +18,11 @@ public class FactoriaTransporteTest {
         ITransporte camion = FactoriaTransporte.getTransporte(FactoriaTransporte.CAMION);
         Assertions.assertTrue(camion instanceof Camion);
     }
+
+    @Test
+    @DisplayName("Comprobacion de Default")
+    public void comprobacionNull(){
+        ITransporte resultado = FactoriaTransporte.getTransporte(0);
+        Assertions.assertNull(resultado);
+    }
 }
